@@ -43,6 +43,7 @@ class GameScene: SKScene
         border2.physicsBody?.categoryBitMask = PhysicsCategory.player
         border2.physicsBody?.affectedByGravity = false
         border2.physicsBody?.isDynamic = false
+        player.setScale(2)
         addChild(border2)
         addChild(border1)
         addChild(player)
