@@ -2,7 +2,7 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "Background.png",
+      "filename" : "border.png",
       "scale" : "1x"
     },
     {
