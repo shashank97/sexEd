@@ -23,6 +23,8 @@ class GameScene: SKScene
     let screenSize: CGRect = UIScreen.main.bounds
     var touchingScreen = false
     var yVelocity: CGFloat = -200
+    
+    let main1 = SKSpriteNode(imageNamed: "Begin Screen")
 
     func random() -> CGFloat {
         return CGFloat(Float(arc4random()) / 0xFFFFFFFF)
@@ -123,3 +125,29 @@ class GameScene: SKScene
         player.physicsBody?.velocity=CGVector(dx: 0, dy: (player.physicsBody?.velocity.dy)!+relativeVelocity.dy*rate)
         }
     }
+
+    // Popup boxes that come up upon collision
+
+
+//    // Function that shows dialogue box
+//func showBox(_ info: CGImage)
+//    {
+//        _.anchorPoint = CGPointMake(0.5, 0.5)
+//        _.size.height = self.size.height
+//        _.position = CGPointMake(CGRectGetMidX(self, frame), CRectGetMidY(self.frame))
+//        
+//        self.addChild(info)
+//    }
+
+
+
+
+
+
+
+
+
+
+
+
+
