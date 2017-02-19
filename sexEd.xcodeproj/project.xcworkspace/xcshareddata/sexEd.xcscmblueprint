@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "3C6C515EC80117B6BAC4EEDCBE0103904F3355D9",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "25B8BE1DC311A1D614ADD3CC1D9CA27E77B3D2E5" : 9223372036854775807,
+    "3C6C515EC80117B6BAC4EEDCBE0103904F3355D9" : 9223372036854775807
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "1975BC04-7189-4CE0-A610-C4EDA62A1543",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "25B8BE1DC311A1D614ADD3CC1D9CA27E77B3D2E5" : "",
+    "3C6C515EC80117B6BAC4EEDCBE0103904F3355D9" : "sexEd\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "sexEd",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "sexEd.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/mkarroqe\/trianglz.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "25B8BE1DC311A1D614ADD3CC1D9CA27E77B3D2E5"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/shashank97\/sexEd.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "3C6C515EC80117B6BAC4EEDCBE0103904F3355D9"
+    }
+  ]
+}

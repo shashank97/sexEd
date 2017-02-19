@@ -23,8 +23,6 @@ class GameScene: SKScene
     let screenSize: CGRect = UIScreen.main.bounds
     var touchingScreen = false
     var yVelocity: CGFloat = -200
-    //private var label : SKLabelNode?
-    //private var spinnyNode : SKShapeNode?
     
     override func didMove(to view: SKView)
     {
