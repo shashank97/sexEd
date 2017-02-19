@@ -13,6 +13,8 @@ struct PhysicsCategory
     static let player : UInt32 = 0x1 << 1
     static let  border1 : UInt32 = 0x1 << 1
     static let  border2 : UInt32 = 0x1 << 1
+    static let chlamydia: UInt32 = 0x1 << 1
+    static let crab: UInt32 = 0x1 << 1
 }
 class GameScene: SKScene
 {
@@ -105,6 +107,14 @@ class GameScene: SKScene
         border2.physicsBody?.categoryBitMask = PhysicsCategory.player
         border2.physicsBody?.affectedByGravity = false
         border2.physicsBody?.isDynamic = false
+//        player.physicsBody = SKPhysicsBody (circleOfRadius: player.frame.height / 2)
+//        player.physicsBody?.categoryBitMask = PhysicsCategory.player
+//        player.physicsBody?.collisionBitMask = PhysicsCategory.crab
+//        player.physicsBody?.contactTestBitMask = PhysicsCategory.crab
+//        player.physicsBody?.collisionBitMask = PhysicsCategory.chlamydia
+//        player.physicsBody?.contactTestBitMask = PhysicsCategory.chlamydia
+        player.physicsBody?.isDynamic = true
+        self.addChild (player)
         player.setScale(2.5)
         addChild(border2)
         addChild(border1)
