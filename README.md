@@ -1,7 +1,7 @@
-[sc1]: images/sc1.png "main screen"
-[sc2]: images/sc2.png "stds"
-[sc3]: images/sc3.png "chlamydia"
-
+[sc1]: images/main.png "main screen"
+[sc2]: images/stds.png "stds"
+[sc3]: images/chlamydia.png "chlamydia"
+[sc4]: images/condoms.png "chlamydia"
 
 # sexEd (name TBD)
 [Name of App] is an iOS game that aims teach young people about STDs.
@@ -13,6 +13,8 @@
 ![][sc1]
 
 ![][sc2]
+
+![][sc4]
 
 ![][sc3]
 
