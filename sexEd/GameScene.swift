@@ -57,8 +57,6 @@ class GameScene: SKScene
         
     }
     
-
-
     override func didMove(to view: SKView)
     {
         player.physicsBody = SKPhysicsBody(rectangleOf: player.size)
@@ -89,7 +87,7 @@ class GameScene: SKScene
                 ])
         ))
     }
- 
+    
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?)
     {
         print(player.position.y)
@@ -118,15 +116,6 @@ class GameScene: SKScene
         }
         touchingScreen = false
     }
-    
-    override func touchesCancelled(_ touches: Set<UITouch>, with event: UIEvent?)
-    {
-//        for t in touches
-//        {
-//            self.touchUp(atPoint: t.location(in: self))
-//        }
-    }
-    
     
     override func update(_ currentTime: CFTimeInterval) {
         let rate: CGFloat = 0.5; //Controls rate of motion. 1.0 instantaneous, 0.0 none.
