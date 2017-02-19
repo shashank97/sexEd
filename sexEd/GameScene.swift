@@ -10,12 +10,15 @@ import GameplayKit
 
 class GameScene: SKScene
 {
-    
+    let player = SKSpriteNode(imageNamed: "User")
+    let screenSize: CGRect = UIScreen.main.bounds
     //private var label : SKLabelNode?
     //private var spinnyNode : SKShapeNode?
     
     override func didMove(to view: SKView)
     {
+        player.position = CGPoint(x: (-screenSize.size.width/2), y: 0)
+        addChild(player)
         // Get label node from scene and store it for use later
 //        self.label = self.childNode(withName: "//helloLabel") as? SKLabelNode
 //        if let label = self.label

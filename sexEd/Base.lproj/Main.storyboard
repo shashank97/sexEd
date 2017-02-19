@@ -20,18 +20,7 @@
                     <view key="view" multipleTouchEnabled="YES" contentMode="scaleToFill" id="3se-qz-xqx" customClass="SKView">
                         <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="Background" translatesAutoresizingMaskIntoConstraints="NO" id="26E-AT-aAx">
-                                <rect key="frame" x="0.0" y="10" width="667" height="355"/>
-                            </imageView>
-                        </subviews>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <constraints>
-                            <constraint firstItem="26E-AT-aAx" firstAttribute="leading" secondItem="3se-qz-xqx" secondAttribute="leading" id="3vX-tM-dxb"/>
-                            <constraint firstItem="26E-AT-aAx" firstAttribute="top" secondItem="8aa-yV-Osq" secondAttribute="bottom" id="E8Y-8J-XIn"/>
-                            <constraint firstItem="qHh-Mt-9TT" firstAttribute="top" secondItem="26E-AT-aAx" secondAttribute="bottom" id="tlA-B9-kyT"/>
-                            <constraint firstAttribute="trailing" secondItem="26E-AT-aAx" secondAttribute="trailing" id="vBl-hl-qyj"/>
-                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SZV-WD-TEh" sceneMemberID="firstResponder"/>
@@ -39,7 +28,4 @@
             <point key="canvasLocation" x="25.637181409295355" y="23.199999999999999"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="Background" width="1920" height="1080"/>
-    </resources>
 </document>
