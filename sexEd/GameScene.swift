@@ -60,9 +60,7 @@ class GameScene: SKScene
         crab.run(SKAction.sequence([actionMove, actionMoveDone]))
         
     }
-<<<<<<< Updated upstream
     
-=======
     func addChlam() {
         
         // Create sprite
@@ -90,9 +88,6 @@ class GameScene: SKScene
         
     }
 
-
-
->>>>>>> Stashed changes
     override func didMove(to view: SKView)
     {
         player.physicsBody = SKPhysicsBody(rectangleOf: player.size)
