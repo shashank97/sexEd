@@ -14,16 +14,51 @@ struct PhysicsCategory
     static let  border1 : UInt32 = 0x1 << 1
     static let  border2 : UInt32 = 0x1 << 1
 }
-
 class GameScene: SKScene
 {
+    
     let player = SKSpriteNode(imageNamed: "User")
     let border1 = SKSpriteNode(imageNamed: "border")
     let border2 = SKSpriteNode(imageNamed: "border")
     let screenSize: CGRect = UIScreen.main.bounds
     var touchingScreen = false
     var yVelocity: CGFloat = -200
+
+    func random() -> CGFloat {
+        return CGFloat(Float(arc4random()) / 0xFFFFFFFF)
+    }
     
+    func random(min: CGFloat, max: CGFloat) -> CGFloat {
+        return random() * (max - min) + min
+    }
+    
+    func addCrabs() {
+        
+        // Create sprite
+        let crab = SKSpriteNode(imageNamed: "Crabs2")
+        
+        // Determine where to spawn the monster along the Y axis
+        let actualY = random(min: -(size.height/2) + crab.size.height/2, max: (size.height/2) - (crab.size.height/2))
+        
+        // Position the monster slightly off-screen along the right edge,
+        // and along a random position along the Y axis as calculated above
+        crab.position = CGPoint(x: size.width + crab.size.width/2, y: actualY)
+        
+        // Add the monster to the scene
+        addChild(crab)
+        
+        // Determine speed of the monster
+        let actualDuration = random(min: CGFloat(2.0), max: CGFloat(4.0))
+        
+        // Create the actions
+        let actionMove = SKAction.move(to: CGPoint(x: -crab.size.width/2, y: actualY), duration: TimeInterval(actualDuration))
+        let actionMoveDone = SKAction.removeFromParent()
+        crab.run(SKAction.sequence([actionMove, actionMoveDone]))
+        
+    }
+    
+
+
     override func didMove(to view: SKView)
     {
         player.physicsBody = SKPhysicsBody(rectangleOf: player.size)
@@ -46,6 +81,13 @@ class GameScene: SKScene
         addChild(border1)
         addChild(player)
         print(self.frame.height)
+        
+        run(SKAction.repeatForever(
+            SKAction.sequence([
+                SKAction.run(addCrabs),
+                SKAction.wait(forDuration: 1.0)
+                ])
+        ))
     }
  
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?)
