@@ -28,7 +28,7 @@ class GameScene: SKScene
     {
         player.physicsBody = SKPhysicsBody(rectangleOf: player.size)
         player.physicsBody?.affectedByGravity = false
-        player.position = CGPoint(x: (-screenSize.size.width/2), y: 0)
+        player.position = CGPoint(x: (-screenSize.size.width/2 * 0.9), y: 0)
         border1.position = CGPoint(x:0, y: screenSize.size.height/2)
         border1.physicsBody = SKPhysicsBody(rectangleOf: border1.size)
         border1.physicsBody?.categoryBitMask = PhysicsCategory.border1
