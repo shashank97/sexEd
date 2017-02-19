@@ -39,8 +39,10 @@ class GameScene: SKScene
         // Create sprite
         let crab = SKSpriteNode(imageNamed: "Crabs2")
         
+        crab.setScale(2)
+        
         // Determine where to spawn the monster along the Y axis
-        let actualY = random(min: -(size.height/2) + crab.size.height/2, max: (size.height/2) - (crab.size.height/2))
+        let actualY = random(min: -(size.height/2) + (crab.size.height), max: (size.height/2) - (crab.size.height))
         
         // Position the monster slightly off-screen along the right edge,
         // and along a random position along the Y axis as calculated above
@@ -53,12 +55,44 @@ class GameScene: SKScene
         let actualDuration = random(min: CGFloat(2.0), max: CGFloat(4.0))
         
         // Create the actions
-        let actionMove = SKAction.move(to: CGPoint(x: -crab.size.width/2, y: actualY), duration: TimeInterval(actualDuration))
+        let actionMove = SKAction.move(to: CGPoint(x: -(size.width/2)-crab.size.width/2, y: actualY), duration: TimeInterval(actualDuration))
         let actionMoveDone = SKAction.removeFromParent()
         crab.run(SKAction.sequence([actionMove, actionMoveDone]))
         
     }
+<<<<<<< Updated upstream
     
+=======
+    func addChlam() {
+        
+        // Create sprite
+        let chlamydia = SKSpriteNode(imageNamed: "Chlamydia")
+        
+        chlamydia.setScale(2)
+        
+        // Determine where to spawn the monster along the Y axis
+        let actualY = random(min: -(size.height/2) + (chlamydia.size.height), max: (size.height/2) - (chlamydia.size.height))
+        
+        // Position the monster slightly off-screen along the right edge,
+        // and along a random position along the Y axis as calculated above
+        chlamydia.position = CGPoint(x: size.width + chlamydia.size.width/2, y: actualY)
+        
+        // Add the monster to the scene
+        addChild(chlamydia)
+        
+        // Determine speed of the monster
+        let actualDuration = random(min: CGFloat(2.0), max: CGFloat(4.0))
+        
+        // Create the actions
+        let actionMove = SKAction.move(to: CGPoint(x: -(size.width/2)-chlamydia.size.width/2, y: actualY), duration: TimeInterval(actualDuration))
+        let actionMoveDone = SKAction.removeFromParent()
+        chlamydia.run(SKAction.sequence([actionMove, actionMoveDone]))
+        
+    }
+
+
+
+>>>>>>> Stashed changes
     override func didMove(to view: SKView)
     {
         player.physicsBody = SKPhysicsBody(rectangleOf: player.size)
@@ -76,7 +110,7 @@ class GameScene: SKScene
         border2.physicsBody?.categoryBitMask = PhysicsCategory.player
         border2.physicsBody?.affectedByGravity = false
         border2.physicsBody?.isDynamic = false
-        player.setScale(2)
+        player.setScale(3)
         addChild(border2)
         addChild(border1)
         addChild(player)
@@ -85,6 +119,12 @@ class GameScene: SKScene
         run(SKAction.repeatForever(
             SKAction.sequence([
                 SKAction.run(addCrabs),
+                SKAction.wait(forDuration: 1.0)
+                ])
+        ))
+        run(SKAction.repeatForever(
+            SKAction.sequence([
+                SKAction.run(addChlam),
                 SKAction.wait(forDuration: 1.0)
                 ])
         ))
